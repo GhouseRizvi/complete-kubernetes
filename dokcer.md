@@ -14,3 +14,9 @@ if nginx is webserver almalinux/alpine is enough
 or you can take the official image.
 
 Crearting you images
+
+###### How to push images to registry
+docker push [docker-jhub-url]/[username]/[imagename]:version
+
+tagging the image
+docker tag from:v1 e55b-122-167-172-99.ngrok-free.app/docker-reg/from:v1
