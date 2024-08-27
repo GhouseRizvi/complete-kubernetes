@@ -20,3 +20,6 @@ docker push [docker-jhub-url]/[username]/[imagename]:version
 
 tagging the image
 docker tag from:v1 e55b-122-167-172-99.ngrok-free.app/docker-reg/from:v1
+
+pushing the image
+docker push e55b-122-167-172-99.ngrok-free.app/docker-reg/from:v1
