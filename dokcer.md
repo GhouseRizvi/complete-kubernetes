@@ -16,6 +16,8 @@ or you can take the official image.
 Crearting you images
 
 ###### How to push images to registry
+docker login 192.168.56.12:5000
+
 docker push [docker-jhub-url]/[username]/[imagename]:version
 
 tagging the image
