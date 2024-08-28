@@ -5,5 +5,6 @@ RUN yum install unzip nginx -y
 RUN unzip /tmp/crispy_kitchen.zip -d /tmp/
 RUN rm -rf /usr/share/nginx/html/*
 RUN chmod -R 755 /usr/share/nginx/html/
-RUN cp -r /tmp/2129_crispy_kitchen/* -d /usr/shar/nginx/html/
+#RUN cp -r /tmp/2129_crispy_kitchen/* -d /usr/shar/nginx/html/
+RUN mkdir -p /usr/share/nginx/html/ && cp -r /tmp/2129_crispy_kitchen/* /usr/share/nginx/html/
 CMD [ "nginx","-g","daemon off;" ]
