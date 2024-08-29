@@ -4,5 +4,5 @@ FROM almalinux:${VERSION:-8}
 ARG GREETING="Good Morning"
 RUN echo "${GREETING}"
 
-ENV GREET=${GREETING}
-RUN echo"${GREET}""
+ENV GREETING=${GREETING}
+RUN echo"${GREETING}}"
