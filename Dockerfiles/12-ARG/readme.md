@@ -5,3 +5,5 @@ we pass this at docker build time
 ARG is mentioned first instruction in dockerfile
 
 declared before from cannot be accesd after from
+
+Use ENV and ERGS for best results
