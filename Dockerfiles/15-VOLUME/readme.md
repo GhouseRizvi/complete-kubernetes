@@ -26,4 +26,9 @@ docker run -d -v nginx:/usr/share/nginx/html -p 80:80 nginx
 if you create a volume and mount it to the container that is going to remain as long as it goes
 
 you can also map it to the folder
+creating folder and attaching to it called as anonymous volumes
+it is not docker managed
+[ec2-user@ip-172-31-86-245 cafe]$ docker run -d -v /home/ec2-user/cafe:/usr/share/nginx/html -p 80:80 nginx
+docker run -d -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root123 mysql
+
 
