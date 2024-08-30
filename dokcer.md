@@ -22,6 +22,8 @@ docker push [docker-jhub-url]/[username]/[imagename]:version
 
 tagging the image
 docker tag from:v1 e55b-122-167-172-99.ngrok-free.app/docker-reg/from:v1
+[ec2-user@ip-172-31-89-197 ~]$ docker tag copy:v1 7a7f-122-167-172-99.ngrok-free.app/docker-reg/copy:v1
+[ec2-user@ip-172-31-89-197 ~]$ docker push 7a7f-122-167-172-99.ngrok-free.app/docker-reg/copy:v1
 
 pushing the image
 docker push e55b-122-167-172-99.ngrok-free.app/docker-reg/from:v1
@@ -30,4 +32,8 @@ docker push e55b-122-167-172-99.ngrok-free.app/docker-reg/from:v1
 docker ps -a -q  it'll give container ids
 nowe
 docker rm -f `docker ps -a -q`
+
+how to run directly from registry
+
+docker run -d -p 8080:80 7a7f-122-167-172-99.ngrok-free.app/docker-reg/copy:v1
 
