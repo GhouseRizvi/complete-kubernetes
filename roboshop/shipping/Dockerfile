@@ -1,13 +1,10 @@
-# Build Stage
-FROM debian:10 AS build
-
-# Install Maven and Java
-RUN apt-get update && apt-get -y install maven && apt-get clean && rm -rf /var/lib/apt/lists/*
+# Build Stage: Use official Maven image
+FROM maven:3.6.3-jdk-8 AS build
 
 # Set the working directory inside the container
 WORKDIR /opt/shipping
 
-# Copy the pom.xml and resolve dependencies (faster builds with cached dependencies)
+# Copy the pom.xml and resolve dependencies
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:go-offline
 
@@ -15,7 +12,7 @@ RUN mvn dependency:go-offline
 COPY src /opt/shipping/src/
 RUN mvn package
 
-# Run Stage
+# Run Stage: Use smaller OpenJDK image
 FROM openjdk:8-jdk
 
 # Expose port 8080 for the application
