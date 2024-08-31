@@ -2,6 +2,7 @@ web
 mongodb
 catalogue
 connect web to catalogue
+user module
 
 1. Web is runnning
 2. Mongodb is running
