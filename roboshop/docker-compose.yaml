@@ -1,4 +1,4 @@
-
+version: "3.9"
 networks:
   roboshop:
     driver: bridge
@@ -10,7 +10,7 @@ services:
     depends_on:
     - catalogue
     ports:
-      - "80:80" 
+      - 80:80 
 
   mongodb:
     image: mongodb:v1
