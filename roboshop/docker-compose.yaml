@@ -48,7 +48,14 @@ services:
     container_name: shipping
     depends_on:
     - mysql 
-    
+  
+  payment:
+    image: payment:v1
+    container_name: payment
+
+  ratings:
+    image: ratings:v1
+    container_name: ratings
 
   
   
