@@ -1,5 +1,5 @@
 FROM nginx
-RUN sudo apt-get install nginx-opentracing
+RUN sudo yum install nginx-opentracing
 RUN rm -rf /usr/share/nginx/html/index.html
 RUN rm -rf /etc/nginx/nginx.conf
 RUN rm -rf /etc/nginx/conf.d/default.conf
