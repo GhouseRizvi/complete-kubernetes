@@ -50,18 +50,15 @@ services:
     - mysql 
   
   rabbitmq:
-    image: rabbitmq:3.7-management-alpine
-    ports:
-      - "5672"
-      - "15672:15672"
+    image: rabbitmq
+    container_name: rabbitmq
 
   payment:
     image: payment:v1
     container_name: payment
     depends_on:
       - rabbitmq
-    ports:
-      - "8080:8080"
+   
 
   ratings:
     image: ratings:v1
