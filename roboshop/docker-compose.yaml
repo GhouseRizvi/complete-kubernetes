@@ -32,6 +32,7 @@ services:
     depends_on:
     - mongodb
     - redis
+    - mysql
   
   cart:
     image: cart:v1
