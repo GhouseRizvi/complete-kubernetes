@@ -12,3 +12,6 @@ managedNodeGroups:
   spot: true
   ssh:
     publicKeyName: kubernetes #place your key
+
+# Create cluster
+[ec2-user@ip-172-31-86-12 ~]$ eksctl create cluster --config-file=eks-config.yaml
