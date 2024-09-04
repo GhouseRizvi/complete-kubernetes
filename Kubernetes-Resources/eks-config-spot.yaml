@@ -6,7 +6,7 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-  - name: spot-cluster-1
+  - name: spot-1
     instanceType: t3.medium  # Specify the instance type
     spot: true
     desiredCapacity: 2  # You can define the number of instances if needed
