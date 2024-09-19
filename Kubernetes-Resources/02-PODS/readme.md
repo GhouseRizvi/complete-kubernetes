@@ -1,3 +1,14 @@
+# in docker smallest deployable unit is container
+# in kubernetes the smallest deployable container is pod
+# A pod can have multiple containers
+# A pod is the basic execution unit in a Kubernetes cluster
+# A pod is a logical host for one or more containers
+# we can run a complete project in one POD
+# in a pod all the container will share same network space and share volume as well.
+# a pod can have multiple containers but it can have only one network namespace and one volume mount point.
+
+
+
 [ec2-user@ip-172-31-86-12 ~]$ kubectl apply -f pods.yaml 
 pod/nginx created
 
