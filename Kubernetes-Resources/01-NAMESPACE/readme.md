@@ -1,13 +1,21 @@
+NameSpace are the logical seperation of projects
+
+kubectl api-resources
+there are 2 types of resources
+# namespace level and
+# cluster level
+
+
 to create a resource run the below command
-kubectl create -f namespace.yaml
+# kubectl create -f namespace.yaml
 
 [ec2-user@ip-172-31-86-12 ~]$ kubectl create -f namespace.yaml 
 namespace/roboshop created
 
-kubectl get namespaces
+# kubectl get namespaces
 
 to delete the resources
-kubectl delete -f namespace.yaml
+# kubectl delete -f namespace.yaml
 
 [ec2-user@ip-172-31-86-12 ~]$ kubectl delete -f namespace.yaml 
 namespace "roboshop" deleted
